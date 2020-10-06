@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Star |Contact Us</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="header">
+        <div id="logo">
+          <div id="logo_text">
+            <!-- class="logo_colour", allows you to change the colour of the text -->
+            <h1>
+              <a href="index.html"
+                >Home<span class="logo_colour">Stars</span></a
+              >
+            </h1>
+            <h2>Your Home Project Solution.</h2>
+          </div>
+          <div class="login">
+            <button><a href="./login.html">Log In</a></button>
+            <button><a href="./signup.html">Sign Up</a></button>
+            <button><a href="./join.html">Join HomeStars</a></button>
+          </div>
+        </div>
+        <div id="menubar">
+          <ul id="menu">
+            <li><a href="index.html">Home</a></li>
+            <li>
+              <a href="browse.html">Browse Categories</a>
+            </li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="review.html">Write a Review</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li class="selected"><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content_header"></div>
+      <div id="site_content">
+        <div id="content">
+          <h1 style="text-decoration: gray; text-align: center; color: gray">
+            Contact Us!
+          </h1>
+          <h3>Enter your Details and your message</h3>
+          <div class="form_settings">
+            <p>
+              <span style="font: normal 130% 'century gothic', arial">Name</span
+              ><input class="contact" type="text" name="your_name" value="" />
+            </p>
+            <br />
+            <p>
+              <span style="font: normal 130% 'century gothic', arial"
+                >Email Address</span
+              ><input class="contact" type="email" name="your_email" value="" />
+            </p>
+            <br />
+            <p>
+              <span style="font: normal 130% 'century gothic', arial"
+                >Message</span
+              ><textarea
+                class="contact textarea"
+                rows="8"
+                cols="50"
+                name="your_enquiry"
+              ></textarea>
+            </p>
+            <br />
+            <p style="padding-top: 15px">
+              <span>&nbsp;</span
+              ><input
+                style="
+                  background-color: #bae361;
+                  color: white;
+                  padding: 14px 20px;
+                  padding-bottom: 29px;
+                  margin: 8px 0;
+                  border: none;
+                  cursor: pointer;
+                  margin-left: 105px;
+                "
+                class="submit submitcontact"
+                type="submit"
+                name="contact_submitted"
+                value="Submit"
+              />
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="content_footer"></div>
+    </div>
+  </body>
+</html>

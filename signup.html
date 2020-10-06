@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Star |Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="header">
+        <div id="logo">
+          <div id="logo_text">
+            <button class="home">
+              <a href="./index.html">Back to Homepage</a>
+            </button>
+            <h1>
+              <br />
+              <a href="index.html"
+                >Home<span class="logo_colour">Stars</span></a
+              >
+            </h1>
+            <h2>Your Home Project Solution.</h2>
+          </div>
+
+          <div class="login">
+            <button>Log In</button>
+            <button><a href="./signup.html">Sign Up</a></button>
+            <button><a href="./join.html">Join HomeStars</a></button>
+          </div>
+        </div>
+      </div>
+      <div id="content_header"></div>
+      <div id="site_content loginpage">
+        <form action="/action_page.php" method="post" class="formtest">
+          <div class="imgcontainer imgcontainertest">
+            <img
+              src="style/img_avatar2.png"
+              alt="Avatar"
+              class="avatar avatartest"
+            />
+          </div>
+
+          <div class="container containertest">
+            <label for="uname"><b> Enter Username</b></label>
+            <input
+              class="inputtest"
+              type="text"
+              placeholder="Enter Username"
+              name="uname"
+              required
+            />
+            <label for="uname"><b> Enter Email</b></label>
+            <input
+              class="inputtest"
+              type="email"
+              placeholder="Enter Email"
+              name="uname"
+              required
+            />
+
+            <label for="psw"><b>Enter Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw"
+              id="psw"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            />
+
+            <label for="psw"><b>Re-Enter Password</b></label>
+            <input
+              type="password"
+              placeholder="Enter Password"
+              name="psw2"
+              id="psw2"
+              pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+              required
+            />
+
+            <button class="buttontest" type="submit">Sign Up</button>
+
+            <div id="message">
+              <h3>Password must contain the following:</h3>
+              <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
+              <p id="capital" class="invalid">
+                A <b>capital (uppercase)</b> letter
+              </p>
+              <p id="number" class="invalid">A <b>number</b></p>
+              <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            </div>
+          </div>
+
+          <div
+            class="container containertest"
+            style="background-color: #f1f1f1"
+          >
+            <button class="cancelbtn" type="button">
+              <a href="./index.html">Cancel</a>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div id="content_footer"></div>
+    </div>
+    <script>
+      var myInput = document.getElementById("psw");
+      var letter = document.getElementById("letter");
+      var capital = document.getElementById("capital");
+      var number = document.getElementById("number");
+      var length = document.getElementById("length");
+
+      myInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      };
+
+      myInput.onblur = function () {
+        document.getElementById("message").style.display = "none";
+      };
+
+      myInput.onkeyup = function () {
+        var lowerCaseLetters = /[a-z]/g;
+        if (myInput.value.match(lowerCaseLetters)) {
+          letter.classList.remove("invalid");
+          letter.classList.add("valid");
+        } else {
+          letter.classList.remove("valid");
+          letter.classList.add("invalid");
+        }
+
+        var upperCaseLetters = /[A-Z]/g;
+        if (myInput.value.match(upperCaseLetters)) {
+          capital.classList.remove("invalid");
+          capital.classList.add("valid");
+        } else {
+          capital.classList.remove("valid");
+          capital.classList.add("invalid");
+        }
+
+        var numbers = /[0-9]/g;
+        if (myInput.value.match(numbers)) {
+          number.classList.remove("invalid");
+          number.classList.add("valid");
+        } else {
+          number.classList.remove("valid");
+          number.classList.add("invalid");
+        }
+
+        if (myInput.value.length >= 8) {
+          length.classList.remove("invalid");
+          length.classList.add("valid");
+        } else {
+          length.classList.remove("valid");
+          length.classList.add("invalid");
+        }
+      };
+    </script>
+  </body>
+</html>

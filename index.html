@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Star |Home Page</title>
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="header">
+        <div id="logo">
+          <div id="logo_text">
+            <!-- class="logo_colour", allows you to change the colour of the text -->
+            <h1>
+              <a href="index.html"
+                >Home<span class="logo_colour">Stars</span></a
+              >
+            </h1>
+            <h2>Your Home Project Solution.</h2>
+          </div>
+          <div class="login">
+            <button><a href="./login.html">Log In</a></button>
+            <button><a href="./signup.html">Sign Up</a></button>
+            <button><a href="./join.html">Join HomeStars</a></button>
+          </div>
+        </div>
+        <div id="menubar">
+          <ul id="menu">
+            <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+            <li class="selected"><a href="index.html">Home</a></li>
+            <li><a href="browse.html">Browse Categories</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="review.html">Write a Review</a></li>
+            <li><a href="quote.html">Get a Quote</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div id="content_header"></div>
+      <div id="site_content">
+        <div id="banner">
+          <p></p>
+        </div>
+        <div id="sidebar_container">
+          <div class="sidebar">
+            <div class="sidebar_top"></div>
+            <div class="sidebar_item">
+              <h3>Get Matched with Local Pros!</h3>
+              <h4>
+                Stop calling around! HomeStars sends pros straight to your
+                inbox.
+              </h4>
+              <p>
+                <li>
+                Chat directly with available pros interested in your project
+                </li>
+                <li>Discuss project details, costs and timelines</li>
+                <li>Compare quotes and hire with confidence</li>
+              </p>
+              <button><a href="#open-button" onclick="openForm()">Chat Now!</a></button>
+            </div>
+            <div class="sidebar_base"></div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar_top"></div>
+            <div class="sidebar_item">
+              <h3>Join Our New Letter Subscription Today!</h3>
+              <button><a href="./news.html">Click here to get started!</a></button>
+            </div>
+          </div>
+          <div class="sidebar">
+            <div class="sidebar_top"></div>
+            <div class="sidebar_item">
+              <h3>Quickly get quotes from verified and reviewed pros</h3>
+              <form method="post" action="./quote.html" id="search_form">
+                <p>
+                  <input
+                    class="search"
+                    type="text"
+                    name="search_field"
+                    value="Enter services..."
+                  />
+                  <a href="./quote.html"><input
+                    name="search"
+                    type="image"
+                    style="border: 0; margin: 0 0 -9px 5px"
+                    src="style/search.png"
+                    alt="Search"
+                    title="Search"
+                  /></a>
+                </p>
+              </form>
+            </div>
+            <div class="sidebar_base"></div>
+          </div>
+        </div>
+        <div id="content">
+          <h1 style="text-align: center; color:#3E78DE;">Welcome to the HomeStars!</h1>
+          <div class="home1">
+          <h2 style="color: #77A4F3;">Hire Verified and Reviewed Pros</h2>
+          <h3 style="color: gray;">
+            With reviews, ratings and Verification, HomeStars gives you the
+            tools you need to hire with confidence.
+          </h3>
+          <h4>
+            <ul>
+              <li>
+                Get matched with 3 pros directly or research yourself from a
+                list of verified and reviewed pros
+              </li>
+              <li>
+                Read reviews and browse project photos submitted by homeowners
+                in your area.
+              </li>
+              <li>
+                Pros with a Verified Badge have passed a credit check, criminal
+                background check and are licensed.
+              </li>
+            </ul>
+          </h4>
+        </div>
+        <br>
+        <div class="home1">
+          <h2 style="color: #77A4F3;">Get Matched with Local Pros!</h2>
+          <h3 style="color: gray;">
+            STOP CALLING AROUND. HOMESTARS SENDS PROS STRAIGHT TO YOUR INBOX
+          </h3>
+          <h4>
+            <ul>
+              <li>
+                <a style="color: #77a4f3" href="#open-button" onclick="openForm()">Chat</a> directly with available pros interested in your project
+              </li>
+              <li>Discuss project details, costs and timelines</li>
+              <li>Compare quotes and hire with confidence</li>
+            </ul>
+          </h4>
+        </div>
+        </div>
+      </div>
+      
+      <button id="open-button" class="open-button" onclick="openForm()">Chat!</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="#" class="form-containerchat">
+    <h1>Chat with our pros!</h1>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type your message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+  </body>
+</html>
